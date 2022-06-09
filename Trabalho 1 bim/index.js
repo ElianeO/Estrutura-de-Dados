@@ -47,54 +47,68 @@ function quit(){
 
 
 //listar os alunos em ordem crescente por nome
+let comparacoes, trocas
 function list(){
-    alunos.sort(function(a, b){
-        if(a.nome < b.nome) return -1;
-        if(a.nome > b.nome) return 1;
-        return 0;
-    });
-
-
-    for(let i = vetor.length; i < alunos.length; i--){
-        console.log(alunos[i].nome + " " + alunos[i].ra + " " + alunos[i].idade + " " + alunos[i].sexo + " " + alunos[i].media + " " + alunos[i].resultado);
+    for(let posSel=0; posSel<vetor.length -1;posSel++){
+        let posMenor = posSel +1
+        for(let i = posMenor +1; i < vetor.length; i++){
+            if(vetor[posMenor] > vetor[i]){
+                posMenor = i
+            }
+        }
+        if(vetor[posSel] > vetor[posMenor]){
+            [ vetor[posSel], vetor[posMenor]]
+        }
     }
-
-    menu();
-}
+    list(estudante.nome)
+    console.log(estudante.nome)
 
 
 //listar os alunos em ordem decrescente por RA
 function listRa(){
-    alunos.sort(function(a, b){
-        if(a.ra < b.ra) return -1;
-        if(a.ra > b.ra) return 1;
-        return 0;
-    });
-
-
-    for(let i = 0; i < alunos.length; i++){
-        console.log(alunos[i].nome + " " + alunos[i].ra + " " + alunos[i].idade + " " + alunos[i].sexo + " " + alunos[i].media + " " + alunos[i].resultado);
+    for(let posSel=0; posSel<vetor.length -1;posSel++){
+        let posMenor = posSel +1
+        for(let i = posMenor +1; i < vetor.length; i++){
+            if(vetor[posMenor] > vetor[i]){
+                posMenor = i
+            }
+        }
+        if(vetor[posSel] > vetor[posMenor]){
+            [ vetor[posSel], vetor[posMenor]]
+        }
     }
+} 
+    listRa(estudante.ra)
+    console.log(estudante.ra)
+
 
     menu();
-}
+
+
 
 //listar os alunos em ordem crescente por nome, apenas dos aprovados
 function listA(){
-    alunos.sort(function(a, b){
-        if(a.nome < b.nome) return -1;
-        if(a.nome > b.nome) return 1;
-        return 0;
-    });
-
-    for(let i = 0; i < alunos.length; i++){
-        if(alunos[i].resultado === "Aprovado"){
-            console.log(alunos[i].nome + " " + alunos[i].ra + " " + alunos[i].idade + " " + alunos[i].sexo + " " + alunos[i].media + " " + alunos[i].resultado);
+    for(let posSel=0; posSel<vetor.length -1;posSel++){
+        let posMenor = posSel +1
+        for(let i = posMenor +1; i < vetor.length; i++){
+            if(vetor[posMenor] > vetor[i]){
+                posMenor = i
+            }
+        }
+        if(vetor[posSel] > vetor[posMenor]){
+            [ vetor[posSel], vetor[posMenor]]
         }
     }
 
-    menu();
+    for(let i = 0; i < alunos.length; i++){
+        if(alunos[i].resultado === "Aprovado"){
+               listA(estudante.nome)
+               console.log(estudante.nome)
+        }
+    }
 }
+    menu();
+
 
 //adicionar alunos
 function add(){
@@ -121,4 +135,4 @@ function add(){
             });
         });
     });
-}
+}}
