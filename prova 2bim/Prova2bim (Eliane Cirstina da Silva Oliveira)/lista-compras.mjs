@@ -30,11 +30,11 @@
     4º Cebola
     5º Leite */
 
-    fila.enqueue('Arroz')
-    fila.enqueue('Feijao')
-    fila.enqueue('Macarrao')
-    fila.enqueue('Cebola')
-    fila.enqueue('Leite')
+    fila.enqueue('Arroz',0)
+    fila.enqueue('Feijao',1)
+    fila.enqueue('Macarrao',2)
+    fila.enqueue('Cebola',3)
+    fila.enqueue('Leite',4)
 
     /* Produtos de limpeza/higiene pessoal
     6º Sabonete
@@ -42,10 +42,10 @@
     8º Sabão em pó
     9º Creme dental
 */
-    fila.enqueue('Sabonete')
-    fila.enqueue('Detergente')
-    fila.enqueue('Sabão em pó')
-    fila.enqueue('Creme dental')
+    fila.enqueue('Sabonete',5)
+    fila.enqueue('Detergente',6)
+    fila.enqueue('Sabão em pó',7)
+    fila.enqueue('Creme dental',8)
 
 
 
@@ -63,8 +63,8 @@
     - Banana (ficará como o primeiro item da lista)
     - Maçã (ficará como o segundo item da lista) */
    
-    fila.enqueue('Banana',10)
-    fila.enqueue('Maca',9)
+    fila.enqueue('Banana',0)
+    fila.enqueue('Maca',1)
     console.log(fila.print())
  
 
@@ -74,9 +74,9 @@
     - Condicionador de cabelo
     - Álcool
 */
-    fila.enqueue('Agua sanitária', 0)
-    fila.enqueue('Condicionador de cabelo', 1)
-    fila.enqueue('alcool', 2)
+    fila.enqueue('Agua sanitária',2)
+    fila.enqueue('Condicionador de cabelo',3)
+    fila.enqueue('alcool',4)
 
 
 
@@ -95,8 +95,8 @@
     - Banana
     - Álcool
 */
-    let removido = fila.dequeue('banana')
-    let removido1 = fila.dequeue('alcool')
+    let removido = fila.dequeue(0, 'banana')
+    let removido1 = fila.dequeue(3, 'alcool')
     
 
    
@@ -114,8 +114,8 @@
 /*
     9. Consulte quem é o primeiro e o último item da lista atual.
 */
-    console.log(fila.peek())
-    console.log(fila.back())
+    console.log('primeiro intem da lista: ',fila.peek())
+    console.log('ultimo item da lista: ',fila.back())
 
 
 

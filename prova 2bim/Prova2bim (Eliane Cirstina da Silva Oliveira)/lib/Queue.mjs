@@ -23,12 +23,16 @@ export default class Queue {
     }
 
     // Método para remoção da fila
-    dequeue() {
-        return this.#data.shift()    
+    dequeue(val) {
+        return this.#data.shift(val)    
     }
     //método para inserção no meio da fila
     enqueue(val, pos){
     this.#data.splice(pos, 0, val)
+}
+  //método para remoção no meio da fila
+  dequeue(pos){
+    return this.#data.splice(pos, 1)
 }
 
     // Método para consultar o início da fila sem remover o elemento
