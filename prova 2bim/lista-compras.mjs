@@ -53,7 +53,7 @@
 /*
     4. Imprima a lista na ordem correta.
     */
-    console.log(fila.print())
+    console.log('LISTA DE COMPRAS\n', fila.print())
 
 /*
     5. A esposa do Professor Alexandre ligou pedindo que ele adicionasse mais 2 (dois)
@@ -65,7 +65,7 @@
    
     fila.enqueue('Banana',0)
     fila.enqueue('Maca',1)
-    console.log(fila.print())
+    console.log('\nLISTA DE COMPRAS\n', fila.print())
  
 
     /* Produtos de limpeza/higiene pessoal
@@ -74,9 +74,9 @@
     - Condicionador de cabelo
     - Álcool
 */
-    fila.enqueue('Agua sanitária',2)
-    fila.enqueue('Condicionador de cabelo',3)
-    fila.enqueue('alcool',4)
+    fila.enqueue('Agua sanitária',9)
+    fila.enqueue('Condicionador de cabelo',10)
+    fila.enqueue('alcool',13)
 
 
 
@@ -84,7 +84,7 @@
     6. Imprima a lista na ordem correta depois de adicionar os novos produtos.
 */
 
-    console.log(fila.print())
+console.log('\nLISTA DE COMPRAS\n', fila.print())
 
 
 
@@ -96,8 +96,7 @@
     - Álcool
 */
     let removido = fila.dequeue(0, 'banana')
-    let removido1 = fila.dequeue(3, 'alcool')
-    
+    let removido1 = fila.dequeue(12,'alcool')
 
    
 
@@ -105,8 +104,8 @@
     8. Mostre apenas os itens removidos da lista.
 */
 
-    console.log({removido})
-    console.log({removido1})
+    console.log('\n',{removido},)
+    console.log({removido1}, '\n')
 
 
 
@@ -123,5 +122,5 @@
 /*
     10. Imprima a lista correta depois de todas as alterações que foram feitas.
 */
-  console.log(fila.print())
+console.log('\nLISTA DE COMPRAS\n', fila.print())
 
