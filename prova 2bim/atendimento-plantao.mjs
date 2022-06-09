@@ -89,7 +89,7 @@ console.log(atendimento.print())
 */
 let proximo = atendimento.peekFront()
 console.log({proximo})
-console.log(atendimento.print())
+
 
 
 
@@ -101,7 +101,6 @@ console.log(atendimento.print())
 
 removido = atendimento.removeFront()
 console.log({removido})
-console.log(atendimento.print())
 
 
 
